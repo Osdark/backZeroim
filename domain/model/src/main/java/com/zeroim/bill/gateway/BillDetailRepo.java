@@ -6,8 +6,8 @@ import reactor.core.publisher.Mono;
 
 public interface BillDetailRepo {
     Mono<BillDetail> create(BillDetail billDetail);
-    Mono<BillDetail> getById(Long id);
-    Mono<Void> delete(Long id);
+    Mono<BillDetail> getById(String id);
+    Mono<Void> delete(String id);
 
     Flux<BillDetail> getAll();
 }

@@ -16,11 +16,11 @@ public class IdTypeUseCase {
         return idTypeRepo.create(idType);
     }
 
-    public Mono<IdType> getById(Long id) {
+    public Mono<IdType> getById(String id) {
         return idTypeRepo.getById(id);
     }
 
-    public Mono<Void> delete(Long id) {
+    public Mono<Void> delete(String id) {
         return idTypeRepo.delete(id);
     }
 

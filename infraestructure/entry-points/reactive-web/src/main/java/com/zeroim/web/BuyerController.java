@@ -14,17 +14,17 @@ public class BuyerController {
     private BuyerUseCase buyerUseCase;
 
     @PostMapping(value = "/buyer")
-    public Mono<Buyer> create(Buyer buyer) {
+    public Mono<Buyer> create(@RequestBody Buyer buyer) {
         return buyerUseCase.create(buyer);
     }
 
     @GetMapping(value = "/buyer/{id}")
-    public Mono<Buyer> getById(@PathVariable Long id) {
+    public Mono<Buyer> getById(@PathVariable String id) {
         return buyerUseCase.getById(id);
     }
 
     @DeleteMapping(value = "/buyer/delete/{id}")
-    public Mono<Void> delete(@PathVariable Long id) {
+    public Mono<Void> delete(@PathVariable String id) {
         return buyerUseCase.delete(id);
     }
 

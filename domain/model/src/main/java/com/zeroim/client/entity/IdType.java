@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class IdType {
-    private Long id;
+    private String id;
     private String abbreviation;
     private String name;
 }

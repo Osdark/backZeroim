@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Document(collection = "Stock")
 public class StockItemData {
-    private Long id;
-    private Long productId;
+    private String id;
+    private String productId;
     private Integer quantity;
 }

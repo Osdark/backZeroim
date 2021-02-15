@@ -6,8 +6,8 @@ import reactor.core.publisher.Mono;
 
 public interface StockItemRepo {
     Mono<StockItem> create(StockItem stockItem);
-    Mono<StockItem> getById(Long id);
-    Mono<Void> delete(Long id);
+    Mono<StockItem> getById(String id);
+    Mono<Void> delete(String id);
 
     Flux<StockItem> getAll();
 }

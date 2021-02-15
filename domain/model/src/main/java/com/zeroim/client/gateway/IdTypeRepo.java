@@ -6,8 +6,8 @@ import reactor.core.publisher.Mono;
 
 public interface IdTypeRepo {
     Mono<IdType> create(IdType idType);
-    Mono<IdType> getById(Long id);
-    Mono<Void> delete(Long id);
+    Mono<IdType> getById(String id);
+    Mono<Void> delete(String id);
 
     Flux<IdType> getAll();
 }

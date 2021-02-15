@@ -14,8 +14,8 @@ import java.math.BigDecimal;
 @Document(collection = "BillDetail")
 public class BillDetailData {
     @Id
-    private Long id;
-    private Long productId;
+    private String id;
+    private String productId;
     private Integer quantity;
     private BigDecimal value;
 }

@@ -16,11 +16,11 @@ public class StockItemUseCase {
         return stockItemRepo.create(stockItem);
     }
 
-    public Mono<StockItem> getById(Long id) {
+    public Mono<StockItem> getById(String id) {
         return stockItemRepo.getById(id);
     }
 
-    public Mono<Void> delete(Long id) {
+    public Mono<Void> delete(String id) {
         return stockItemRepo.delete(id);
     }
 

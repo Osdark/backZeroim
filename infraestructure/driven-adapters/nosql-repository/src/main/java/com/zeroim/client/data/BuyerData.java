@@ -12,8 +12,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Buyer")
 public class BuyerData {
     @Id
-    private Long idNumber;
-    private Long idType;
+    private String idNumber;
+    private String idType;
     private String name;
     private String address;
     private String phone;

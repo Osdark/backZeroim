@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class StockItem {
-    private Long id;
-    private Long productId;
+    private String id;
+    private String productId;
     private Integer quantity;
 }

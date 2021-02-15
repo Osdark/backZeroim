@@ -14,17 +14,17 @@ public class BillDetailController {
     private BillDetailUseCase billDetailUseCase;
 
     @PostMapping(value = "/billDetail")
-    public Mono<BillDetail> create(BillDetail billDetail) {
+    public Mono<BillDetail> create(@RequestBody BillDetail billDetail) {
         return billDetailUseCase.create(billDetail);
     }
 
     @GetMapping(value = "/billDetail/{id}")
-    public Mono<BillDetail> getById(@PathVariable Long id) {
+    public Mono<BillDetail> getById(@PathVariable String id) {
         return billDetailUseCase.getById(id);
     }
 
     @DeleteMapping(value = "/billDetail/delete/{id}")
-    public Mono<Void> delete(@PathVariable Long id) {
+    public Mono<Void> delete(@PathVariable String id) {
         return billDetailUseCase.delete(id);
     }
 

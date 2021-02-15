@@ -14,17 +14,17 @@ public class StockController {
     private StockItemUseCase stockItemUseCase;
 
     @PostMapping(value = "/stock")
-    public Mono<StockItem> create(StockItem stockItem) {
+    public Mono<StockItem> create(@RequestBody StockItem stockItem) {
         return stockItemUseCase.create(stockItem);
     }
 
     @GetMapping(value = "/stock/{id}")
-    public Mono<StockItem> getById(@PathVariable Long id) {
+    public Mono<StockItem> getById(@PathVariable String id) {
         return stockItemUseCase.getById(id);
     }
 
     @DeleteMapping(value = "/stock/delete/{id}")
-    public Mono<Void> delete(@PathVariable Long id) {
+    public Mono<Void> delete(@PathVariable String id) {
         return stockItemUseCase.delete(id);
     }
 

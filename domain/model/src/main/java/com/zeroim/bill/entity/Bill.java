@@ -11,9 +11,9 @@ import java.util.Date;
 @NoArgsConstructor
 @Data
 public class Bill {
-    private Long id;
+    private String id;
     private Date date;
-    private Long clientId;
-    private Long[] billDetail;
+    private String clientId;
+    private String[] billDetail;
     private BigDecimal total;
 }

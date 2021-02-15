@@ -14,17 +14,17 @@ public class IdTypeController {
     private IdTypeUseCase idTypeUseCase;
 
     @PostMapping(value = "/idType")
-    public Mono<IdType> create(IdType idType) {
+    public Mono<IdType> create(@RequestBody IdType idType) {
         return idTypeUseCase.create(idType);
     }
 
     @GetMapping(value = "/idType/{id}")
-    public Mono<IdType> getById(@PathVariable Long id) {
+    public Mono<IdType> getById(@PathVariable String id) {
         return idTypeUseCase.getById(id);
     }
 
     @DeleteMapping(value = "/idType/delete/{id}")
-    public Mono<Void> delete(Long id) {
+    public Mono<Void> delete(String id) {
         return idTypeUseCase.delete(id);
     }
 

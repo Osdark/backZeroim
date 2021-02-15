@@ -10,8 +10,8 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Data
 public class BillDetail {
-    private Long id;
-    private Long productId;
+    private String id;
+    private String productId;
     private Integer quantity;
     private BigDecimal value;
 }

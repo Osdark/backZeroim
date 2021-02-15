@@ -16,11 +16,11 @@ public class BillDetailUseCase {
         return billDetailRepo.create(billDetail);
     }
 
-    public Mono<BillDetail> getById(Long id) {
+    public Mono<BillDetail> getById(String id) {
         return billDetailRepo.getById(id);
     }
 
-    public Mono<Void> delete(Long id) {
+    public Mono<Void> delete(String id) {
         return billDetailRepo.delete(id);
     }
 

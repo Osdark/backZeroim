@@ -24,13 +24,13 @@ public class IdTypeRepoAdapter implements IdTypeRepo {
     }
 
     @Override
-    public Mono<IdType> getById(Long id) {
+    public Mono<IdType> getById(String id) {
         return idTypeDataRepo.findById(id)
                 .map(converterIdType::toEntity);
     }
 
     @Override
-    public Mono<Void> delete(Long id) {
+    public Mono<Void> delete(String id) {
         idTypeDataRepo.findById(id)
                 .map(idTypeDataRepo::delete);
         return Mono.empty();

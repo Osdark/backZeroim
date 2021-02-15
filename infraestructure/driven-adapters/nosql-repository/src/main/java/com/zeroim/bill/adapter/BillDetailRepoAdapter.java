@@ -24,13 +24,13 @@ public class BillDetailRepoAdapter implements BillDetailRepo {
     }
 
     @Override
-    public Mono<BillDetail> getById(Long id) {
+    public Mono<BillDetail> getById(String id) {
         return billDetailDataRepo.findById(id)
                 .map(converterBillDetail::toEntity);
     }
 
     @Override
-    public Mono<Void> delete(Long id) {
+    public Mono<Void> delete(String id) {
         billDetailDataRepo.findById(id)
                 .map(billDetailDataRepo::delete);
         return Mono.empty();

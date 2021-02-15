@@ -24,13 +24,13 @@ public class StockItemRepoAdapter implements StockItemRepo {
     }
 
     @Override
-    public Mono<StockItem> getById(Long id) {
+    public Mono<StockItem> getById(String id) {
         return stockItemDataRepo.findById(id)
                 .map(converterStockItem::toEntity);
     }
 
     @Override
-    public Mono<Void> delete(Long id) {
+    public Mono<Void> delete(String id) {
         stockItemDataRepo.findById(id)
                 .map(stockItemDataRepo::delete);
         return Mono.empty();

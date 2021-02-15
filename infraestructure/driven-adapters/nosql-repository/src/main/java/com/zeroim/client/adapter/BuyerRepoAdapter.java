@@ -24,13 +24,13 @@ public class BuyerRepoAdapter implements BuyerRepo {
     }
 
     @Override
-    public Mono<Buyer> getById(Long buyerId) {
+    public Mono<Buyer> getById(String buyerId) {
         return buyerDataRepo.findById(buyerId)
                 .map(converterBuyer::toEntity);
     }
 
     @Override
-    public Mono<Void> delete(Long buyerId) {
+    public Mono<Void> delete(String buyerId) {
         buyerDataRepo.findById(buyerId)
                 .map(buyerDataRepo::delete);
         return Mono.empty();

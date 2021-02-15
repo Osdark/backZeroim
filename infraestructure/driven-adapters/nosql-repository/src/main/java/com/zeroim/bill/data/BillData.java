@@ -15,9 +15,9 @@ import java.util.Date;
 @Document(collection = "Bill")
 public class BillData {
     @Id
-    private Long id;
+    private String id;
     private Date date;
-    private Long clientId;
-    private Long[] billDetail;
+    private String clientId;
+    private String[] billDetail;
     private BigDecimal total;
 }

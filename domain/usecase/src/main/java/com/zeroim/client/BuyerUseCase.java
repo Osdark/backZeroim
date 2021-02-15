@@ -16,11 +16,11 @@ public class BuyerUseCase {
         return buyerRepo.create(buyer);
     }
 
-    public Mono<Buyer> getById(Long buyerId) {
+    public Mono<Buyer> getById(String buyerId) {
         return buyerRepo.getById(buyerId);
     }
 
-    public Mono<Void> delete(Long buyerId) {
+    public Mono<Void> delete(String buyerId) {
         return buyerRepo.delete(buyerId);
     }
 
