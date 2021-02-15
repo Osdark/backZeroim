@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Buyer")
 public class BuyerData {
     @Id
+    private String id;
     private String idNumber;
     private String idType;
     private String name;
