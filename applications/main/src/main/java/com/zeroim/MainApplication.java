@@ -10,7 +10,7 @@ import org.springframework.web.reactive.config.EnableWebFlux;
 @SpringBootApplication
 @EnableWebFlux
 @EnableCaching
-public class MainApplication {
+public class    MainApplication {
     public static void main(String[] args) {
         SpringApplication.run(MainApplication.class, args);
     }
