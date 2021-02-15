@@ -1,5 +1,6 @@
 package com.zeroim.bill.data;
 
+import com.mongodb.lang.NonNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,8 +17,14 @@ import java.util.Date;
 public class BillData {
     @Id
     private String id;
+    @NonNull
+    private String BillNumber;
+    @NonNull
     private Date date;
+    @NonNull
     private String clientId;
+    @NonNull
     private String[] billDetail;
+    @NonNull
     private BigDecimal total;
 }

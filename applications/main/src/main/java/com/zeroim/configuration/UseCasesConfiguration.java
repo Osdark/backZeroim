@@ -8,8 +8,6 @@ import com.zeroim.client.BuyerUseCase;
 import com.zeroim.client.gateway.BuyerRepo;
 import com.zeroim.product.ProductUseCase;
 import com.zeroim.product.gateway.ProductRepository;
-import com.zeroim.stock.StockItemUseCase;
-import com.zeroim.stock.gateway.StockItemRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -35,10 +33,4 @@ public class UseCasesConfiguration {
     public BuyerUseCase buyerUseCase(BuyerRepo buyerRepo) {
         return new BuyerUseCase(buyerRepo);
     }
-
-    @Bean
-    public StockItemUseCase stockItemUseCase(StockItemRepo stockItemRepo) {
-        return new StockItemUseCase(stockItemRepo);
-    }
-
 }

@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 @Data
 public class BillDetail {
     private String id;
+    private String billNumber;
     private String productId;
     private Integer quantity;
     private BigDecimal value;
