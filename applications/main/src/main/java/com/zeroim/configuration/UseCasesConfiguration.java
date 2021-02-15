@@ -1,8 +1,6 @@
 package com.zeroim.configuration;
 
-import com.zeroim.bill.BillDetailUseCase;
 import com.zeroim.bill.BillUseCase;
-import com.zeroim.bill.gateway.BillDetailRepo;
 import com.zeroim.bill.gateway.BillRepo;
 import com.zeroim.client.BuyerUseCase;
 import com.zeroim.client.gateway.BuyerRepo;
@@ -22,11 +20,6 @@ public class UseCasesConfiguration {
     @Bean
     public BillUseCase billUseCase(BillRepo billRepo) {
         return new BillUseCase(billRepo);
-    }
-
-    @Bean
-    public BillDetailUseCase billDetailUseCase(BillDetailRepo billDetailRepo) {
-        return new BillDetailUseCase(billDetailRepo);
     }
 
     @Bean

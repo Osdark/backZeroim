@@ -3,6 +3,7 @@ package com.zeroim.bill.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import java.math.BigDecimal;
 
@@ -10,9 +11,32 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Data
 public class BillDetail {
-    private String id;
-    private String billNumber;
     private String productId;
     private Integer quantity;
-    private BigDecimal value;
+    private BigDecimal unitValue;
+    private BigDecimal totalValue = BigDecimal.ZERO;
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public BigDecimal getUnitValue() {
+        return unitValue;
+    }
+
+    public void setUnitValue(BigDecimal unitValue) {
+        this.unitValue = unitValue;
+    }
+
+    public BigDecimal getTotalValue() {
+        return totalValue;
+    }
+
+    public void setTotalValue(BigDecimal totalValue) {
+        this.totalValue = totalValue;
+    }
 }
