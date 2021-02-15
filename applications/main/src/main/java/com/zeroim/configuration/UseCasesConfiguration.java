@@ -5,9 +5,7 @@ import com.zeroim.bill.BillUseCase;
 import com.zeroim.bill.gateway.BillDetailRepo;
 import com.zeroim.bill.gateway.BillRepo;
 import com.zeroim.client.BuyerUseCase;
-import com.zeroim.client.IdTypeUseCase;
 import com.zeroim.client.gateway.BuyerRepo;
-import com.zeroim.client.gateway.IdTypeRepo;
 import com.zeroim.product.ProductUseCase;
 import com.zeroim.product.gateway.ProductRepository;
 import com.zeroim.stock.StockItemUseCase;
@@ -36,11 +34,6 @@ public class UseCasesConfiguration {
     @Bean
     public BuyerUseCase buyerUseCase(BuyerRepo buyerRepo) {
         return new BuyerUseCase(buyerRepo);
-    }
-
-    @Bean
-    public IdTypeUseCase idTypeUseCase(IdTypeRepo idTypeRepo) {
-        return new IdTypeUseCase(idTypeRepo);
     }
 
     @Bean
