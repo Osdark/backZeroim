@@ -21,6 +21,4 @@ public class ProductData {
     private String name;
     @NonNull
     private BigDecimal price;
-    @NonNull
-    private BigInteger sku;
 }
