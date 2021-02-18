@@ -18,8 +18,8 @@ public class UseCasesConfiguration {
     }
 
     @Bean
-    public BillUseCase billUseCase(BillRepo billRepo) {
-        return new BillUseCase(billRepo);
+    public BillUseCase billUseCase(BillRepo billRepo, ProductRepository productRepository) {
+        return new BillUseCase(billRepo, productRepository);
     }
 
     @Bean

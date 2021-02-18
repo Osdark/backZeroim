@@ -12,9 +12,26 @@ import java.math.BigDecimal;
 @Data
 public class BillDetail {
     private String productId;
+    private String productName;
     private Integer quantity;
     private BigDecimal unitValue;
     private BigDecimal totalValue = BigDecimal.ZERO;
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
     public Integer getQuantity() {
         return quantity;
